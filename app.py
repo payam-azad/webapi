@@ -11,9 +11,9 @@ def hello():
 
 
 @app.route("/test", methods=['GET', 'POST'])
-def hello():
+def test():
     try:
-        message = request.json['name']
+        message = request.json['message']
     except Exception as e:
         message = str(e)
     return {'method': request.method,
